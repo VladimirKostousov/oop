@@ -7,6 +7,7 @@ class Student:
         self.courses_in_progress = []
         self.grades = {}
 
+
 class Mentor:
     def __init__(self, name, surname):
         self.name = name
@@ -21,6 +22,14 @@ class Mentor:
                 student.grades[course] = [grade]
         else:
             return 'Ошибка'
+
+class Lecture(Mentor):
+    '''класс лекторов'''
+    pass
+
+class Reviewer(Mentor):
+    '''класс экспертов, проверяющих домашнее задание'''
+    pass
 
 best_student = Student('Ruoy', 'Eman', 'your_gender')
 best_student.courses_in_progress += ['Python']
